@@ -8,7 +8,7 @@ export default class landing extends Component {
     render() {
         return (
             <div>
-                
+                <buttonComponent/>
             </div>
         )
     }
