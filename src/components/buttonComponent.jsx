@@ -1,11 +1,13 @@
 import React, {
-	Components,
+	Component,
 } from "react";
 
-const button = ({inputype}) =>{
-	return <>
-	<button type ="inputype" ></button>
-	</>;
+const button = ({valueInput, classname, inputType}) =>{
+	return( 
+	<>
+	<button className= {classname} type ={valueInput} >{inputType}</button>
+	</>
+	)
 }
 
 

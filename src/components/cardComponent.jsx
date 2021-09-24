@@ -1,16 +1,14 @@
-import React, {Components} from 'react';
+import React, {Component} from 'react';
 
 
-const card = () =>{
+const Card = ({classname}) =>{
     return(
-        <>
-            <div className="shadow">
-                
+            <div className={classname}>
+                doireopi
             </div>
-        </>
     )
 }
 
 
 
-export default card;
+export default Card;
