@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Card from "../components/cardComponent";
+import Card from "../components/sect1CardComponent";
 import image from "../abdrahim-oulfakir-L9MlT8rCurk-unsplash.jpg";
-import Button from "../components/buttonComponent";
+import Button from "../components/sect1ButtonComponent";
 
 export default class section1 extends Component {
   render() {
