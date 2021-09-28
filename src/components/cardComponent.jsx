@@ -4,18 +4,11 @@ const Card = ({ title, date, body }) => {
   return (
     <>
       <div
-        className="shadow m-auto"
-        style={{
-          width: "455px",
-          padding: "10px",
-          Height: "485px",
-          Top: "6468px",
-          Left: "-1754px",
-        }}
+        className="shadow w-80 h-96 p-5"
       >
-        <h4>{title}</h4>
-        <h5>{date}</h5>
-        <p>{body}</p>
+        <h4 className="text-sm font-semibold">{title}</h4>
+        <h5 className="text-sm">{date}</h5>
+        <p className="text-sm text-gray-600 leadin">{body}</p>
       </div>
     </>
   );
