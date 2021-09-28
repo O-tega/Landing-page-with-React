@@ -95,7 +95,7 @@ export default class landing extends Component {
           <li key={item.id} className="mb-2">
             <Link
               href={item.link}
-              className="border-b border-solid border-transparent text-gray-600 active:text-blue-300 capitalize "
+              className="border-b border-solid border-transparent text-gray-600 active:text-blue-300 capitalize font-roboto"
             >
               {item.name}
             </Link>
@@ -105,12 +105,12 @@ export default class landing extends Component {
     return (
       <footer className="footer-1 bg-blue-50 py-8 sm:py-12 overflow-x-hidden">
         <div className="container mx-auto md:mx-12 px-4">
-          <div className=" md:grid grid-cols-4 lg:grid grid-cols-4 sm:-mx-4 md:py-4">
+          <div className=" md:grid lg:grid grid-cols-4 sm:-mx-4 md:py-4">
             <div className="px-4 flex-shrink sm:mb-6">
               <h5 className="text-xl mb-6 text-blue-500 font-semibold">
                 LOGO.
               </h5>
-              <p className="text-base text-gray-600 leading-7">
+              <p className="text-base text-gray-600 leading-7 font-roboto">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi doloremque sequi aspernatur ipsum, sint quod eius libero
                 consectetur debitis eveniet quasi voluptatem at molestiae

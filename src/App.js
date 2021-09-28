@@ -3,14 +3,14 @@ import './App.css';
 import Landing from '../src/pages/landing';
 import Section1 from './pages/section1';
 import Footer from './pages/Footer';
-import CardSection from './pages/CardSection';
+import Blog from './pages/CardSection';
 
 function App() {
   return (
     <div className="">
       <Landing/>
       <Section1 />
-      <CardSection />
+      <Blog />
       <Footer />
     </div>
   );

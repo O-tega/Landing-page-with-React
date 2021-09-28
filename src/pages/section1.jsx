@@ -29,10 +29,10 @@ export default class section1 extends Component {
   render() {
     return (
       <div class="mt-24">
-        <h5 class="text-blue-600 text-center uppercase font-medium font-sans mb-3 text-opacity-90">
+        <h5 class="text-blue-600 text-center uppercase font-medium mb-3 text-opacity-90 font-roboto">
           Our Service
         </h5>
-        <h2 class="text-gray-700  text-center text-2xl md:text-3xl capitalize font-bold text-opacity-90">
+        <h2 class="text-gray-700  text-center text-2xl md:text-3xl capitalize font-bold text-opacity-90 font-roboto">
           {" "}
           We are providing digital services{" "}
         </h2>
@@ -55,14 +55,14 @@ export default class section1 extends Component {
             />
           </div>
           <div class="block p-5 mt-4">
-            <h5 class="text-blue-600 uppercase font-medium font-sans">
+            <h5 class="text-blue-600 uppercase font-medium font-roboto">
               About us
             </h5>
-            <h2 class="text-gray-700 mt-6 text-4xl capitalize font-bold text-opacity-90">
+            <h2 class="text-gray-700 mt-6 text-4xl capitalize font-bold text-opacity-90 font-roboto">
               {" "}
               We design, build brands <br />& digital projects.{" "}
             </h2>
-            <p class="mt-8 mb-10 text-base text-gray-600 leading-7">
+            <p class="mt-8 mb-10 text-base text-gray-600 leading-7 font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
               repudiandae id vitae facere obcaecati exercitationem eveniet vero
               aut perspiciatis recusandae, odio tenetur voluptates ea quae porro
@@ -70,7 +70,7 @@ export default class section1 extends Component {
               reprehenderit! Consectetur labore, ad commodi, asperiores omnis
               repudiandae, dolorum suscipit unde sit enim esse.
             </p>
-            <p class="text-base text-gray-600 leading-7">
+            <p class="text-base text-gray-600 leading-7 font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
               rerum eos ea aliquam accusamus eligendi fugiat cumque, iusto ut
               consectetur nihil earum perspiciatis, eum molestiae doloribus

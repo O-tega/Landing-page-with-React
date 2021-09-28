@@ -9,13 +9,13 @@ class Landing extends Component {
       <header className="bg-gradient-to-r from-blue-800 to-blue-500 w-100 h-100 overflow-hidden">
         <Navbar />
         <div className="flex mx-3  md:mx-12 items-center h-[400px] lg:h-[700px]">
-          <div className="container text-left lg:ml-32 w-50">
-            <div className="text-5xl lg:text-6xl text-white">
+          <div className="text-left lg:ml-32 w-50">
+            <div className="text-5xl lg:text-6xl text-white font-roboto">
               <span>Creative</span>
               <br />
               <span>Digital Agency</span>
             </div>
-            <p className="pt-10 text-white lg:w-96 md:w-2/5 text-base leading-7">
+            <p className="pt-10 text-white lg:w-96 md:w-2/5 text-base leading-7 font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               tenetur quisquam inventore laboriosam soluta
             </p>
