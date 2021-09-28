@@ -1,60 +1,68 @@
 import React, { Component } from "react";
 import Card from "../components/sect1CardComponent";
 import image from "../abdrahim-oulfakir-L9MlT8rCurk-unsplash.jpg";
-import Button from "../components/sect1ButtonComponent";
+import Button from "../components/button";
 
 export default class section1 extends Component {
+  state = {
+    cardContent: [
+      {
+        id: 1,
+        title: "Web Development",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore",
+      },
+      {
+        id: 2,
+        title: "Graphic Design",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore",
+      },
+      {
+        id: 3,
+        title: "Digital Marketing",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore",
+      },
+    ],
+  };
   render() {
     return (
       <div class="mt-24">
-        <h5 class="text-blue-600 text-center uppercase font-medium font-sans">
+        <h5 class="text-blue-600 text-center uppercase font-medium font-sans mb-3 text-opacity-90">
           Our Service
         </h5>
         <h2 class="text-gray-700  text-center text-2xl md:text-3xl capitalize font-bold text-opacity-90">
           {" "}
           We are providing digital services{" "}
         </h2>
-        <div class="md:flex mt-16  space-y-4 ">
-          <div class=" block	md:w-3/4 p-8">
-            <Card
-              title="Web Development"
-              content="guoguoguo dpdhdhodjo dpdpod dphdyuyudfyfid edfyiedydegddgued
-            fwdfudgduodge dioegdoegd ediedpided deddeidede deddhedhde dedpipeidede dededhdpide dedpdhpodhede de id3dd8gd"
-            />
-          </div>
-          <div class="block	md:w-3/4 p-8">
-            <Card
-              title="Web Development"
-              content="guoguoguo dpdhdhodjo dpdpod dphdyuyudfyfid edfyiedydegddgued
-            fwdfudgduodge dioegdoegd ediedpided deddeidede deddhedhde dedpipeidede dededhdpide dedpdhpodhede de id3dd8gd"
-            />
-          </div>
-          <div class=" block	md:w-3/4 p-8">
-            <Card
-              title="Web Development"
-              content="guoguoguo dpdhdhodjo dpdpod dphdyuyudfyfid edfyiedydegddgued
-            fwdfudgduodge dioegdoegd ediedpided deddeidede deddhedhde dedpipeidede dededhdpide dedpdhpodhede de id3dd8gd"
-            />
-          </div>
+        <div class="lg:flex mt-16 md:mx-12">
+          {this.state.cardContent.map((item) => {
+            return (
+              <div class="p-5 lg:p-8">
+                <Card key={item.id} title={item.title} content={item.content} />
+              </div>
+            );
+          })}
         </div>
 
-        <div class=" md:flex mt-64 space-y-4 ">
-          <div class="md:flex-auto block  ">
+        <div class="lg:flex md:flex mt-64 md:mx-12">
+          <div class="block flex-shrink p-5 lg:p-8">
             <img
               src={image}
               alt=""
-              className="m-auto w-full md:w-10/12 h-4/6"
+              className="m-auto w-full md:w-[127rem] md:h-[21rem] h-full"
             />
           </div>
-          <div class="block m-4 md:flex-auto">
-            <h5 class="text-blue-600 text-left uppercase font-medium font-sans">
+          <div class="block p-5 mt-4">
+            <h5 class="text-blue-600 uppercase font-medium font-sans">
               About us
             </h5>
-            <h2 class="text-gray-700 mt-6 text-left text-4xl capitalize font-bold text-opacity-100">
+            <h2 class="text-gray-700 mt-6 text-4xl capitalize font-bold text-opacity-90">
               {" "}
               We design, build brands <br />& digital projects.{" "}
             </h2>
-            <p class="mt-8">
+            <p class="mt-8 mb-10 text-base text-gray-600 leading-7">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
               repudiandae id vitae facere obcaecati exercitationem eveniet vero
               aut perspiciatis recusandae, odio tenetur voluptates ea quae porro
@@ -62,9 +70,7 @@ export default class section1 extends Component {
               reprehenderit! Consectetur labore, ad commodi, asperiores omnis
               repudiandae, dolorum suscipit unde sit enim esse.
             </p>
-            <br />
-            <br />
-            <p>
+            <p class="text-base text-gray-600 leading-7">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
               rerum eos ea aliquam accusamus eligendi fugiat cumque, iusto ut
               consectetur nihil earum perspiciatis, eum molestiae doloribus
@@ -72,8 +78,8 @@ export default class section1 extends Component {
             </p>
             <br />
             <Button
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-              inputype="Read More"
+              classname="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full"
+              label="Read More"
             />
           </div>
         </div>

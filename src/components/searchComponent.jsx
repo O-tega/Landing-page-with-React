@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 
-const Search =({classname, id, inputType, placeholder, newclass, content})=>{
+const Search =({classname, id, inputType, placeholder, newclass, content, spanClass})=>{
     return(
         <div className={newclass}>
             <input className={classname} id={id} type={inputType} placeholder={placeholder}/>
-            <span>{content}</span>
+            <span className={spanClass}>{content}</span>
         </div>
          
     )

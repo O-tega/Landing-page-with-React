@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from "react";
 
 const Card = ({ title, date, body }) => {
   return (
@@ -6,12 +6,11 @@ const Card = ({ title, date, body }) => {
       <div
         className="shadow m-auto"
         style={{
-          width: '455px',
-          padding: '10px',
-          Height: '485px',
-          Top: '6468px',
-          Left: '-1754px',
-        
+          width: "455px",
+          padding: "10px",
+          Height: "485px",
+          Top: "6468px",
+          Left: "-1754px",
         }}
       >
         <h4>{title}</h4>
