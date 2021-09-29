@@ -3,27 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.3.0",
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefix": "^0.1.6",
     "bootstrap": "^5.1.1",
     "font-awesome": "4.7.0",
-    "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.1",
     "tailwindcss": "^2.2.15",
+=======
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+>>>>>>> 7af6b6b3f8a8cd9b1e9e6d260a7d12326da771f2
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/style/tailwind.css -o src/style/main.css",
     "build:watch": "postcss src/style/tailwind.css -o src/style/main.css --watch"
@@ -45,5 +53,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.7",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^6.2.2",
+    "postcss": "^7.0.38",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
   }
 }
