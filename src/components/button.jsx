@@ -1,6 +1,6 @@
 import React from "react";
 
-const button = ({ classname, label }) => {
+const Button = ({ classname, label }) => {
   return (
     <>
       <button className={classname}>{label}</button>
@@ -8,4 +8,4 @@ const button = ({ classname, label }) => {
   );
 };
 
-export default button;
+export default Button;
