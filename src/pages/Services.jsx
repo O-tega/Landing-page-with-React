@@ -37,7 +37,7 @@ export default class section1 extends Component {
           {" "}
           We are providing digital services{" "}
         </h2>
-        <div className='absolute right-4 md:mx-32'>
+        <div className='absolute right-6 md:mx-32'>
           <ArrowComponent />
         </div>
         <div class="lg:flex mt-16 md:mx-32 ">
