@@ -1,242 +1,125 @@
-import React, { Fragment } from "react";
-import {
-	Disclosure,
-	Menu,
-	Transition,
-} from "@headlessui/react";
-import {
-	BellIcon,
-	MenuIcon,
-	XIcon,
-} from "@heroicons/react/outline";
+import React, { useState } from "react";
+import Search from "../components/searchComponent";
+import { Link } from "react-router-dom";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
-const navigation = [
-	{
-		name: "Dashboard",
-		href: "#",
-		current: true,
-	},
-	{
-		name: "Team",
-		href: "#",
-		current: false,
-	},
-	{
-		name: "Projects",
-		href: "#",
-		current: false,
-	},
-	{
-		name: "Calendar",
-		href: "#",
-		current: false,
-	},
+const navItems = [
+  {
+    id: 1,
+    name: "home",
+    link: "/",
+  },
+  {
+    id: 2,
+    name: "about",
+    link: "about",
+  },
+  {
+    id: 3,
+    name: "pages",
+    link: "pages",
+  },
+  {
+    id: 4,
+    name: "services",
+    link: "services",
+  },
+  {
+    id: 5,
+    name: "portfolio",
+    link: "portfolio",
+  },
+  {
+    id: 6,
+    name: "blog",
+    link: "blog",
+  },
+  {
+    id: 7,
+    name: "contact",
+    link: "contact",
+  },
 ];
 
-function classNames(...classes) {
-	return classes
-		.filter(Boolean)
-		.join(" ");
-}
+const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  return (
+    <div className="pt-5 lg:mx-28 relative">
+      <nav className="mx-3 flex justify-between items-center mb-5 md:mx-12 md:mb-0">
+        <Link to="/" className="font-bold text-white text-2xl">
+          LOGO.
+        </Link>
+        <div className="pr-8 lg:block hidden">
+          {navItems.map((item) => {
+            return (
+              <Link to={item.link} className="text-white p-4">
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+        <Search
+          newclass="rounded-full bg-white lg:w-48 md:w-50 flex items-center justify-around relative"
+          classname=" border-none rounded-full py-2 px-3 text-blue-700 leading-tight focus:outline-none focus:shadow-outline w-full"
+          id="username"
+          spanClass="absolute right-0 mr-3"
+          type="text"
+          placeholder="search"
+          content={
+            <Link to="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-blue-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </Link>
+          }
+        />
+        <div className="lg:hidden">
+          {showMenu ? (
+            <XIcon
+              onClick={() => setShowMenu(false)}
+              className="w-10 h-10 text-white"
+            />
+          ) : (
+            <MenuIcon
+              onClick={() => setShowMenu(true)}
+              className="w-10 h-10 text-white"
+            />
+          )}
+        </div>
+      </nav>
+      <div className="w-full absolute lg:hidden">
+        <nav
+          className={`bg-white mx-2 rounded transition duration-500 ease-in-out ${
+            showMenu
+              ? "transform translate-y-0"
+              : "transform -translate-y-full hidden"
+          }`}
+        >
+          {navItems.map((item) => {
+            return (
+              <Link
+                to={item.link}
+                className="block text-left capitalize p-4 active:scale-50 "
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+    </div>
+  );
+};
 
-export default function navbar() {
-	return (
-		<Disclosure
-			as='nav'
-			className='bg-gray-800'
-		>
-			{({ open }) => (
-				<>
-					<div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
-						<div className='relative flex items-center justify-between h-16'>
-							<div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
-								{/* Mobile menu button*/}
-								<Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
-									<span className='sr-only'>
-										Open main menu
-									</span>
-									{open ? (
-										<XIcon
-											className='block h-6 w-6'
-											aria-hidden='true'
-										/>
-									) : (
-										<MenuIcon
-											className='block h-6 w-6'
-											aria-hidden='true'
-										/>
-									)}
-								</Disclosure.Button>
-							</div>
-							<div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-								<div className='flex-shrink-0 flex items-center'>
-									<img
-										className='block lg:hidden h-8 w-auto'
-										src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
-										alt='Workflow'
-									/>
-									<img
-										className='hidden lg:block h-8 w-auto'
-										src='https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg'
-										alt='Workflow'
-									/>
-								</div>
-								<div className='hidden sm:block sm:ml-6'>
-									<div className='flex space-x-4'>
-										{navigation.map(
-											(item) => (
-												<a
-													key={
-														item.name
-													}
-													href={
-														item.href
-													}
-													className={classNames(
-														item.current
-															? "bg-gray-900 text-white"
-															: "text-gray-300 hover:bg-gray-700 hover:text-white",
-														"px-3 py-2 rounded-md text-sm font-medium"
-													)}
-													aria-current={
-														item.current
-															? "page"
-															: undefined
-													}
-												>
-													{item.name}
-												</a>
-											)
-										)}
-									</div>
-								</div>
-							</div>
-							<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-								<button
-									type='button'
-									className='bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
-								>
-									<span className='sr-only'>
-										View notifications
-									</span>
-									<BellIcon
-										className='h-6 w-6'
-										aria-hidden='true'
-									/>
-								</button>
-
-								{/* Profile dropdown */}
-								<Menu
-									as='div'
-									className='ml-3 relative'
-								>
-									<div>
-										<Menu.Button className='bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'>
-											<span className='sr-only'>
-												Open user menu
-											</span>
-											<img
-												className='h-8 w-8 rounded-full'
-												src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-												alt=''
-											/>
-										</Menu.Button>
-									</div>
-									<Transition
-										as={Fragment}
-										enter='transition ease-out duration-100'
-										enterFrom='transform opacity-0 scale-95'
-										enterTo='transform opacity-100 scale-100'
-										leave='transition ease-in duration-75'
-										leaveFrom='transform opacity-100 scale-100'
-										leaveTo='transform opacity-0 scale-95'
-									>
-										<Menu.Items className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
-											<Menu.Item>
-												{({
-													active,
-												}) => (
-													<a
-														href='#'
-														className={classNames(
-															active
-																? "bg-gray-100"
-																: "",
-															"block px-4 py-2 text-sm text-gray-700"
-														)}
-													>
-														Your Profile
-													</a>
-												)}
-											</Menu.Item>
-											<Menu.Item>
-												{({
-													active,
-												}) => (
-													<a
-														href='#'
-														className={classNames(
-															active
-																? "bg-gray-100"
-																: "",
-															"block px-4 py-2 text-sm text-gray-700"
-														)}
-													>
-														Settings
-													</a>
-												)}
-											</Menu.Item>
-											<Menu.Item>
-												{({
-													active,
-												}) => (
-													<a
-														href='#'
-														className={classNames(
-															active
-																? "bg-gray-100"
-																: "",
-															"block px-4 py-2 text-sm text-gray-700"
-														)}
-													>
-														Sign out
-													</a>
-												)}
-											</Menu.Item>
-										</Menu.Items>
-									</Transition>
-								</Menu>
-							</div>
-						</div>
-					</div>
-
-					<Disclosure.Panel className='sm:hidden'>
-						<div className='px-2 pt-2 pb-3 space-y-1'>
-							{navigation.map(
-								(item) => (
-									<a
-										key={item.name}
-										href={item.href}
-										className={classNames(
-											item.current
-												? "bg-gray-900 text-white"
-												: "text-gray-300 hover:bg-gray-700 hover:text-white",
-											"block px-3 py-2 rounded-md text-base font-medium"
-										)}
-										aria-current={
-											item.current
-												? "page"
-												: undefined
-										}
-									>
-										{item.name}
-									</a>
-								)
-							)}
-						</div>
-					</Disclosure.Panel>
-				</>
-			)}
-		</Disclosure>
-	);
-}
+export default Navbar;
