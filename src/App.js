@@ -1,12 +1,10 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Landing from '../src/pages/landing';
-import Section1 from './pages/section1';
+import Landing from './pages/Hero';
+import Section1 from './pages/Services';
 import Footer from './pages/Footer';
-import Blog from './pages/CardSection';
-import Pricing from './pages/pricing';
-import Section2 from './pages/section2';
-import Section3 from './pages/section3';
+import Blog from './pages/Blog';
+import Testimonial from './pages/Testimonial';
 
 function App() {
   return (
@@ -16,6 +14,7 @@ function App() {
       <Section2 />
       <Section3/>
       <Pricing/>
+      <Testimonial />
       <Blog />
       <Footer />
     </div>

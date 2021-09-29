@@ -10,12 +10,12 @@ class Landing extends Component {
         <Navbar />
         <div className="flex mx-3  md:mx-12 items-center h-[400px] lg:h-[700px]">
           <div className="text-left lg:ml-32 w-50">
-            <div className="text-5xl lg:text-6xl text-white font-roboto">
+            <div className="text-5xl lg:text-6xl leading-[24px] text-white font-roboto">
               <span>Creative</span>
               <br />
               <span>Digital Agency</span>
             </div>
-            <p className="pt-10 text-white lg:w-96 md:w-2/5 text-base leading-7 font-roboto">
+            <p className="pt-10 text-gray-200 lg:w-96 md:w-2/5 text-base leading-[24px] font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               tenetur quisquam inventore laboriosam soluta
             </p>
