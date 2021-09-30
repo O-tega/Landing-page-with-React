@@ -49,9 +49,9 @@ export const CardPricing = ({ head, price, period, list, active }) => {
     <>
       <div class="flex items-center justify-center w-full mb-12"></div>
       <div
-        className={`shadow-lg transition duration-500 w-80 md:w-52 lg:w-80 h-[500px] p-5 ${
+        className={`shadow-lg transition duration-500 w-full md:w-52 lg:w-80 h-[500px] p-5 ${
           active ? "bg-blue-700" : "bg-white"
-        } text-center m-5`}
+        } text-center `}
       >
         <h4
           className={`text-sm mb-9 font-roboto font-bold text-lg pt-5 ${
@@ -91,7 +91,7 @@ export const CardPricing = ({ head, price, period, list, active }) => {
 
 export const Section2Card = ({ newData }) => {
   return (
-    <div className="lg:w-full md:w-full lg:h-[350px] md:h-[350px] items-center bg-blue-50 my-24 justify-center flex p-20 lg:p-0 md:p-0">
+    <div className="lg:w-full md:w-full lg:h-[350px] md:h-[350px] items-center bg-blue-50 my-24 justify-center flex md:p-20 lg:p-0 md:p-0">
       <div className="border-4 border-white bg-blue-50 lg:flex md:flex h-2/3 md:h-3/4 justify-evenly lg:w-[80%] md:w-[80%] items-center p-10 md:p-10">
         {newData}
       </div>

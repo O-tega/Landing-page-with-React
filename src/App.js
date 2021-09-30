@@ -12,7 +12,7 @@ import Footer from './pages/Footer';
 
 function App() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <Landing/>
       <Section1 />
       <Section2 />

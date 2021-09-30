@@ -20,10 +20,10 @@ const data = [
 
 const Blog = () => {
   return (
-    <div className="flex lg:mx-12 lg:my-40 md:my24">
+    <div className="flex lg:mx-12 lg:my-40 md:my-24">
       <div></div>
       <div class="lg:flex justify-center items-center md:mx-12 ">
-        <div className="w-96 lg:mx-10">
+        <div className="mx-5 lg:w-96  lg:mx-10">
           <h5 className="text-blue-600 uppercase font-medium mb-3 text-opacity-90 font-roboto">
             Our Blog
           </h5>
@@ -55,8 +55,10 @@ const Blog = () => {
             );
           })}
         </div>
-        <ArrowComponent vertical className="md:hidden sm:hidden" />
-        <ArrowComponent className="lg:hidden" />
+        <ArrowComponent vertical className="hidden lg:block" />
+        <div>
+          <ArrowComponent className="lg:hidden w-full" />
+        </div>
       </div>
       {/* <div className="lg:flex">
         {data.map((item) => {

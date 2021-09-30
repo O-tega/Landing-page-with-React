@@ -29,21 +29,21 @@ export default class Section1 extends Component {
   };
   render() {
     return (
-      <div class="lg:my-40 md:my-24 relative">
+      <div class="lg:my-40 my-24 relative">
         <h5 class="text-blue-600 text-center uppercase font-medium mb-3 text-opacity-90 font-roboto">
           Our Service
         </h5>
-        <h2 class="text-gray-700  text-center text-2xl md:text-3xl capitalize font-bold font-roboto">
+        <h2 class="text-gray-700 text-center text-3xl capitalize font-bold font-roboto">
           {" "}
           We are providing digital services{" "}
         </h2>
-        <div className='absolute right-6 md:mx-32'>
+        <div className='absolute right-2 lg:right-6 md:mx-32'>
           <ArrowComponent />
         </div>
-        <div class="lg:grid grid-cols-3 lg:gap-4 md:gap-5 mt-16 lg:mx-32 md:mx-12 ">
+        <div class="lg:grid grid-cols-3 lg:gap-4 gap-y-5 mt-16 lg:mx-32 md:mx-12 ">
           {this.state.cardContent.map((item) => {
             return (
-              <div class="">
+              <div class="mx-5">
                 <Card key={item.id} title={item.title} content={item.content} />
               </div>
             );
