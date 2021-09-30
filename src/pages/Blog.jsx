@@ -58,7 +58,15 @@ const Blog = () => {
         <ArrowComponent vertical className="md:hidden sm:hidden" />
         <ArrowComponent className="lg:hidden" />
       </div>
-    </div>
+      {/* <div className="lg:flex">
+        {data.map((item) => {
+          return (
+            <Card class title={item.title} date={item.date} body={item.body} />
+          );
+        })}
+      </div>
+      <ArrowComponent vertical /> */}
+      </div>
   );
 };
 
