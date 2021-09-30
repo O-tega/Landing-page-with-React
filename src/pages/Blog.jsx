@@ -55,6 +55,7 @@ const Blog = () => {
         })}
       </div>
       <ArrowComponent vertical />
+      </div>
     </div>
   );
 };
