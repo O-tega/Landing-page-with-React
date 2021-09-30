@@ -95,7 +95,7 @@ export default class Footer extends Component {
           <li key={item.id} className="mb-2">
             <Link
               href={item.link}
-              className="border-b border-solid border-transparent text-gray-600 active:text-blue-300 capitalize font-roboto"
+              className="border-b border-solid border-transparent text-body active:text-blue-300 capitalize font-roboto"
             >
               {item.name}
             </Link>
@@ -107,10 +107,10 @@ export default class Footer extends Component {
         <div className="container mx-auto md:mx-12 px-4">
           <div className=" md:grid lg:grid lg:grid-cols-4 md:grid-cols-2 sm:-mx-4 md:py-4">
             <div className="px-4 flex-shrink sm:mb-6">
-              <h5 className="text-xl mb-6 text-blue-500 font-semibold">
+              <h5 className="text-xl mb-6 text-subtitle font-bold">
                 LOGO.
               </h5>
-              <p className="text-base text-gray-600 leading-7 font-roboto">
+              <p className="text-base text-body leading-7 font-roboto">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi doloremque sequi aspernatur ipsum, sint quod eius libero
                 consectetur debitis eveniet quasi voluptatem at molestiae
@@ -119,8 +119,8 @@ export default class Footer extends Component {
 
               <div className="flex flex-row mt-5 mb-6">
                 <div
+                  className="bg-spot shadow-md"
                   style={{
-                    backgroundColor: "blue",
                     height: 20,
                     width: 20,
                     borderRadius: "50%",
@@ -149,19 +149,19 @@ export default class Footer extends Component {
               </div>
             </div>
             <div className="px-4 sm: md:">
-              <h5 className="text-xl font-bold mb-6">Our Links</h5>
+              <h5 className="text-xl text-header font-medium mb-6">Our Links</h5>
               <ul className="list-none footer-links ">
                 {renderLinks(this.state.links.ourLinks)}
               </ul>
             </div>
             <div className="px-4 mt-10 md:mt-0 lg:mt-0 sm: md: ">
-              <h5 className="text-xl font-bold mb-6">Our Company</h5>
+              <h5 className="text-xl text-header font-medium mb-6">Our Company</h5>
               <ul className="list-none footer-links ">
                 {renderLinks(this.state.links.companyLink)}
               </ul>
             </div>
             <div className="px-4 mt-10 w-full md:mt-0 sm: md: ">
-              <h5 className="text-xl font-bold mb-6">Our Services</h5>
+              <h5 className="text-xl text-header font-medium mb-6">Our Services</h5>
               <ul className="list-none footer-links ">
                 {renderLinks(this.state.links.serviceLink)}
               </ul>

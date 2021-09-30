@@ -15,16 +15,16 @@ export default function sectionScreen() {
     <div className="lg:my-40 md:my-24">
       <div class=" mt-16 lg:mx-32 md:mx-12 mx-5">
         <div class="">
-          <h1 className="text-blue-600 uppercase font-medium mb-3 text-opacity-90 font-roboto">OUR PORTFOLIO</h1>
+          <h1 className="text-subtitle uppercase font-medium mb-3 font-roboto">OUR PORTFOLIO</h1>
         </div>
         <div class="">
-          <h1 className="text-3xl md:text-3xl capitalize font-bold font-roboto mb-7">TAKE A LOOK AT OUR LATEST WORK</h1>
+          <h1 className="text-3xl md:text-3xl capitalize font-roboto mb-7 text-header">TAKE A LOOK AT OUR LATEST WORK</h1>
         </div>
         <div class=" mx-auto w-full grid md:grid-cols-3 gap-4 p-4">
-          {cardList.map((id) => (
+          {cardList.map((item, index) => (
             <img
-              key={id}
-              src={teslaImg}
+              key={index}
+              src={item.url}
               alt="selected"
               class="h-full w-full m-1"
             />

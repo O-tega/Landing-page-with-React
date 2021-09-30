@@ -30,14 +30,14 @@ export default class Section1 extends Component {
   render() {
     return (
       <div class="lg:my-40 my-24 relative">
-        <h5 class="text-blue-600 text-center uppercase font-medium mb-3 text-opacity-90 font-roboto">
+        <h5 class="text-subtitle text-center uppercase mb-3 font-medium font-roboto">
           Our Service
         </h5>
-        <h2 class="text-gray-700 text-center text-3xl capitalize font-bold font-roboto">
+        <h2 class="text-center text-3xl capitalize mx-5 font-roboto text-header">
           {" "}
           We are providing digital services{" "}
         </h2>
-        <div className='absolute right-2 lg:right-6 md:mx-32'>
+        <div className='absolute right-4 md:right-16 md:top-5 lg:top-4 lg:right-36'>
           <ArrowComponent />
         </div>
         <div class="lg:grid grid-cols-3 lg:gap-4 gap-y-5 mt-16 lg:mx-32 md:mx-12 ">
@@ -62,11 +62,11 @@ export default class Section1 extends Component {
             <h5 class="text-blue-600 uppercase font-medium font-roboto">
               About us
             </h5>
-            <h2 class="mt-6 text-3xl capitalize font-bold font-roboto">
+            <h2 class="mt-6 text-3xl capitalize font-roboto text-header">
               {" "}
               We design, build brands <br />& digital projects.{" "}
             </h2>
-            <p class="mt-8 mb-10 text-xs leading-7 font-roboto">
+            <p class="mt-8 mb-10 text-xs leading-7 text-body font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
               repudiandae id vitae facere obcaecati exercitationem eveniet vero
               aut perspiciatis recusandae, odio tenetur voluptates ea quae porro
@@ -74,7 +74,7 @@ export default class Section1 extends Component {
               reprehenderit! Consectetur labore, ad commodi, asperiores omnis
               repudiandae, dolorum suscipit unde sit enim esse.
             </p>
-            <p class="text-xs text-gray-600 leading-7 font-roboto">
+            <p class="text-xs text-body leading-7 font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
               rerum eos ea aliquam accusamus eligendi fugiat cumque, iusto ut
               consectetur nihil earum perspiciatis, eum molestiae doloribus
