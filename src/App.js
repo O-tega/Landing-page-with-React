@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import SectionScreen from './pages/sectionScreen';
 import Landing from './pages/Hero';
 import Section1 from './pages/Services';
 import Section2 from './pages/section2';
@@ -15,6 +16,7 @@ function App() {
       <Landing/>
       <Section1 />
       <Section2 />
+      <SectionScreen/>
       <Section3/>
       <Pricing/>
       <Testimonial />
@@ -22,9 +24,8 @@ function App() {
       <Footer />
     </div>
   );
-
-
 }
+
 
 
 export default App;
