@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import Navbar from "../components/navbarComponent";
 import Button from "../components/button.jsx";
 import { Link } from "react-router-dom";
+import stars from '../images/hero.svg';
 
 class Landing extends Component {
   render() {
     return (
-      <header className="bg-gradient-to-r from-blue-800 to-blue-500 w-100 h-100 overflow-hidden">
+      <header className="bg-gradient-to-r from-blue-800 to-blue-500 w-100 h-100 overflow-hidden relative">
+        <img src={stars} className="absolute w-full h-full" alt="stars" />
         <Navbar />
         <div className="flex mx-3  md:mx-12 items-center h-[500px] lg:h-[700px]">
           <div className="text-left lg:ml-32 w-50">
