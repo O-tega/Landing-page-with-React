@@ -1,13 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-import SectionScreen from './pages/sectionScreen';
-=======
 import './App.css';
 import Landing from './pages/Hero';
 import Section1 from './pages/Services';
-import Footer from './pages/Footer';
+import SectionScreen from './pages/sectionScreen';
 import Blog from './pages/Blog';
+import Pricing from './pages/pricing';
+import Section2 from './pages/section2';
+import Section3 from './pages/section3';
 import Testimonial from './pages/Testimonial';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -15,26 +16,13 @@ function App() {
       <Landing/>
       <Section1 />
       <Section2 />
+      <SectionScreen/>
       <Section3/>
-      <Pricing/>
+      <Pricing />
       <Testimonial />
       <Blog />
       <Footer />
     </div>
   );
->>>>>>> 7af6b6b3f8a8cd9b1e9e6d260a7d12326da771f2
-
-
-function App() {
-  return (
-    <div>
-      <SectionScreen/>
-    </div>
-  );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7af6b6b3f8a8cd9b1e9e6d260a7d12326da771f2
-
 export default App;

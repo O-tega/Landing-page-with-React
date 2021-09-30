@@ -1,12 +1,12 @@
 import React from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
-const ArrowLeftRight = ({ vertical }) => {
+const ArrowLeftRight = ({ vertical, className }) => {
   return (
     <div
       className={`flex ${
         vertical ? "flex-col" : "flex-row"
-      } justify-center mt-5 mb-6`}
+      } justify-center mt-5 mb-6 ${className}`}
     >
       <div className="bg-gray-200 h-6 w-6 flex items-center justify-center rounded-full">
         <ChevronLeftIcon className="w-4 h-4 hover:text-white" />

@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class landing extends Component {
+export default class Footer extends Component {
   state = {
     links: {
       ourLinks: [
@@ -105,7 +105,7 @@ export default class landing extends Component {
     return (
       <footer className="footer-1 bg-blue-50 py-8 sm:py-12 overflow-x-hidden">
         <div className="container mx-auto md:mx-12 px-4">
-          <div className=" md:grid lg:grid grid-cols-4 sm:-mx-4 md:py-4">
+          <div className=" md:grid lg:grid lg:grid-cols-4 md:grid-cols-2 sm:-mx-4 md:py-4">
             <div className="px-4 flex-shrink sm:mb-6">
               <h5 className="text-xl mb-6 text-blue-500 font-semibold">
                 LOGO.

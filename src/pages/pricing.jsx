@@ -1,6 +1,4 @@
-import React, {
-	Component,
-} from "react";
+import React from "react";
 import { CardPricing } from "../components/cardComponent";
 
 const data2 = [
@@ -20,6 +18,7 @@ const data2 = [
 		head: "Standard Plan",
 		price: "$99",
 		period: "/month",
+		active: true,
 		content: [
 			"Graphic Design",
 			"Web Design",
@@ -41,15 +40,16 @@ const data2 = [
 		],
 	},
 ];
+
 const Pricing = () => {
 	return (
-		<div className='container flex justify-center w-100 my-20'>
-			<div className='w-4/5'>
-				<div className='mb-2 text-blue-600 font-bold'>
+		<div className='flex justify-center w-100 my-40 md:mx-32'>
+			<div className=''>
+				<div className='mb-3 text-blue-600 uppercase font-medium text-opacity-90 font-roboto'>
 					<h3>Our Pricing</h3>
 				</div>
 				<div className='lg:flex md:flex justify-between mb-5'>
-					<h2 className='font-bold text-lg text-opacity-80 '>
+					<h2 className='font-bold text-3xl text-opacity-80 font-roboto'>
 						Choose A Plan That's Right
 						For You
 					</h2>
@@ -68,7 +68,7 @@ const Pricing = () => {
 							<div class='dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition'></div>
 						</div>
 						{/* <!-- label --> */}
-						<div class='ml-3 text-gray-700 font-medium'>
+						<div class='ml-3 text-gray-700 font-medium font-roboto'>
 							Toggle Me!
 						</div>
 					</label>
@@ -82,7 +82,7 @@ const Pricing = () => {
 								content.map(
 									(listItems) => {
 										return (
-											<li className='list-none text-opacity-80 '>
+											<li className='list-none font-roboto pb-2'>
 												{listItems}
 											</li>
 										);
@@ -93,6 +93,7 @@ const Pricing = () => {
 									<CardPricing
 										head={items.head}
 										price={items.price}
+										active={items.active}
 										period={
 											items.period
 										}

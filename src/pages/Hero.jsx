@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbarComponent";
-import Button from "../components/button";
+import Button from "../components/button.jsx";
 import { Link } from "react-router-dom";
 
 class Landing extends Component {

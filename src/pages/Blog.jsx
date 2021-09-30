@@ -20,15 +20,15 @@ const data = [
 
 const Blog = () => {
   return (
-    <div className="flex md:mx-12 my-40">
+    <div className="flex lg:mx-12 lg:my-40 md:my24">
       <div></div>
-      <div class="flex justify-center items-center md:mx-12 my-40">
-        <div className="w-96 mr-5">
-          <h5 className="text-blue-600 uppercase font-medium mb-2 text-opacity-90 font-roboto">
+      <div class="lg:flex justify-center items-center md:mx-12 ">
+        <div className="w-96 lg:mx-10">
+          <h5 className="text-blue-600 uppercase font-medium mb-3 text-opacity-90 font-roboto">
             Our Blog
           </h5>
-          <h4 className="mb-4 text-xl font-bold">Latest News & blog</h4>
-          <p className="test-sm font-roboto mb-9">
+          <h4 className="mb-4 font-bold text-3xl text-opacity-80 font-roboto">Latest News & blog</h4>
+          <p className="text-xs leading-7 font-roboto mb-9">
             Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod
             tempor incididunt labo.
           </p>
@@ -43,7 +43,7 @@ const Blog = () => {
             </button>
           </div>
         </div>
-        <div className="lg:flex">
+        <div className="md:flex md:mt-8">
           {data.map((item) => {
             return (
               <Card
@@ -55,7 +55,8 @@ const Blog = () => {
             );
           })}
         </div>
-        <ArrowComponent vertical />
+        <ArrowComponent vertical className="md:hidden sm:hidden" />
+        <ArrowComponent className="lg:hidden" />
       </div>
     </div>
   );

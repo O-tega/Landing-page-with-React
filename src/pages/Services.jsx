@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Card from "../components/sect1CardComponent";
 import image from "../Rectangle.png";
-import Button from "../components/button";
+import Button from "../components/button.jsx";
 import ArrowComponent from '../components/arrowLeftRight'
 
-export default class section1 extends Component {
+export default class Section1 extends Component {
   state = {
     cardContent: [
       {
@@ -29,7 +29,7 @@ export default class section1 extends Component {
   };
   render() {
     return (
-      <div class="my-24 relative">
+      <div class="lg:my-40 md:my-24 relative">
         <h5 class="text-blue-600 text-center uppercase font-medium mb-3 text-opacity-90 font-roboto">
           Our Service
         </h5>
@@ -40,17 +40,17 @@ export default class section1 extends Component {
         <div className='absolute right-6 md:mx-32'>
           <ArrowComponent />
         </div>
-        <div class="lg:flex mt-16 md:mx-32 ">
+        <div class="lg:grid grid-cols-3 lg:gap-4 md:gap-5 mt-16 lg:mx-32 md:mx-12 ">
           {this.state.cardContent.map((item) => {
             return (
-              <div class="p-5 lg:p-8">
+              <div class="">
                 <Card key={item.id} title={item.title} content={item.content} />
               </div>
             );
           })}
         </div>
 
-        <div class="lg:flex md:flex mt-64 md:mx-32 ">
+        <div class="lg:flex  mt-24 lg:mx-32 md:mx-12">
           <div class="block flex-shrink p-5 lg:p-8">
             <img
               src={image}
@@ -62,11 +62,11 @@ export default class section1 extends Component {
             <h5 class="text-blue-600 uppercase font-medium font-roboto">
               About us
             </h5>
-            <h2 class="text-gray-700 mt-6 text-4xl capitalize font-bold text-opacity-90 font-roboto">
+            <h2 class="mt-6 text-3xl capitalize font-bold font-roboto">
               {" "}
               We design, build brands <br />& digital projects.{" "}
             </h2>
-            <p class="mt-8 mb-10 text-xs text-gray-600 leading-7 font-roboto">
+            <p class="mt-8 mb-10 text-xs leading-7 font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
               repudiandae id vitae facere obcaecati exercitationem eveniet vero
               aut perspiciatis recusandae, odio tenetur voluptates ea quae porro
