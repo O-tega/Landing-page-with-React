@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="pr-8 lg:block hidden">
           {navItems.map((item) => {
             return (
-              <Link to={item.link} className="text-white p-4">
+              <Link to={item.link} className="text-white p-4 capitalize">
                 {item.name}
               </Link>
             );

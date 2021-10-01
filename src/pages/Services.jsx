@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Card from "../components/sect1CardComponent";
 import image from "../Rectangle.png";
 import Button from "../components/button.jsx";
-import ArrowComponent from '../components/arrowLeftRight'
+import ArrowComponent from "../components/arrowLeftRight";
 
 export default class Section1 extends Component {
   state = {
@@ -11,19 +11,19 @@ export default class Section1 extends Component {
         id: 1,
         title: "Web Development",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore",
+          "Our professional team leverages on creating and building quality designs and sites that best defines brand's identity in the most presentable format. The kind of brand you run depends on the kind of site you need.",
       },
       {
         id: 2,
-        title: "Graphic Design",
+        title: "User experience design",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore",
+          "With the knowledge and experiences of our UX designers team in PottersHub who possess strong creative, technical and problem-solving skills, it has made it easier to solve our clients website user experience concerns. ",
       },
       {
         id: 3,
-        title: "Digital Marketing",
+        title: "Website maintenance",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore",
+          "Creating relevance and ensuring timely updates of your website is a way to keep your website healthy, build/improve the website traffic growth, and strengthen its SEO and search rankings.",
       },
     ],
   };
@@ -37,7 +37,7 @@ export default class Section1 extends Component {
           {" "}
           We are providing digital services{" "}
         </h2>
-        <div className='absolute right-4 md:right-16 md:top-5 lg:top-4 lg:right-36'>
+        <div className="absolute right-4 md:right-16 md:top-5 lg:top-4 lg:right-36">
           <ArrowComponent />
         </div>
         <div class="lg:grid grid-cols-3 lg:gap-4 gap-y-5 mt-16 lg:mx-32 md:mx-12 ">
@@ -67,12 +67,9 @@ export default class Section1 extends Component {
               We design, build brands <br />& digital projects.{" "}
             </h2>
             <p class="mt-8 mb-10 text-xs leading-7 text-body font-roboto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-              repudiandae id vitae facere obcaecati exercitationem eveniet vero
-              aut perspiciatis recusandae, odio tenetur voluptates ea quae porro
-              quidem se provident dolore atque rerum saepe itaque quas enim
-              reprehenderit! Consectetur labore, ad commodi, asperiores omnis
-              repudiandae, dolorum suscipit unde sit enim esse.
+              A network of competence, capacity, knowledge and experience. With
+              a mission for satisfactory results and growth. We keep ourselves informed in the industry on the latest trends to ensure we deliver more improved, better and trendy services that will suit your brand and grow your customer attention and retention.
+
             </p>
             <p class="text-xs text-body leading-7 font-roboto">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,

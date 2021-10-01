@@ -18,12 +18,11 @@ class Landing extends Component {
               <span>Digital Agency</span>
             </div>
             <p className="pt-10 text-gray-200 lg:w-96 md:w-3/5 text-base leading-[24px] font-roboto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              tenetur quisquam inventore laboriosam soluta
+            The PottersHub is a creative agency focused on offering its standard services based on clients needs, preferences and expectations.
             </p>
             <Link className="" to="/learn_more">
               <Button
-                classname="rounded-full mt-10 hover:bg-blue-300 w-36 h-10 font-bold bg-blue-500 text-white"
+                classname="rounded-full mt-10 hover:bg-blue-300 w-36 h-10 font-bold bg-blue-500 text-white hover:shadow-md"
                 label="Learn More"
               />
             </Link>
